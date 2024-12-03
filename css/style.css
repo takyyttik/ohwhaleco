@@ -72,9 +72,12 @@ CSS TABLE OF CONTENTS
     --color-sitefooter-headings: (255 255 255 / 1);
     --color-sitefooter-links: (255 255 255);
 
-    /* DEGINE ALL FONTS USED HERE */
-    --font-body: system-ui, Helvetica, Arial, sans-serif;
-    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+    /* DEFINE ALL FONTS USED HERE */
+    --font-body {
+        font-family: kaisei-tokumin, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
     /* SIZING UNITS */
     --container-width: 1100px;
@@ -130,28 +133,36 @@ body {
 
 h1, h2{
     /* SET THE FONT FOR ALL HEADING TEXT */
-    font-family: var(--font-headings);
     margin: .4em 0;
 }
 
 h1 {
     /* SET H1 FONT SIZE AND LEADING*/
+    font-family: kaisei-tokumin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 3em;
     line-height: 1.1;
+    
 }
 
 h2 {
     /* SET H2 FONT SIZE AND LEADING*/
+    font-family: kaisei-tokumin, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 2em;
     line-height: 1.2;
 }
 
 h3 {
     /* SET H3 FONT SIZE AND LEADING*/
+    font-family: yoon-bubblebubble, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.5em;
     line-height: 1.3;
     margin: .4em 0;
-    font-family: cursive;
 }
 
 p {
@@ -160,6 +171,12 @@ p {
 
     /* NEW SCHOOL WIDOW SLAYER */
     text-wrap: pretty;
+}
+
+a {
+    font-family: figtree, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* GLOBAL MEDIA */
@@ -314,7 +331,7 @@ body {
 
     /*  PUT ALL HEADER CHILDREN SIDE BY SIDE AND VERT CENTERED ON LARGE SCREENS*/
     @media (min-width: 768px) {
-        display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     }
@@ -584,6 +601,7 @@ section {
 
     a {
         color: var(--color-sitefooter-links);
+        text-decoration: none;
     }
 
 
@@ -604,6 +622,10 @@ section {
 
 /* BUTTONS */
 .button {
+    font-family: figtree, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
     /* SET THE BUTTON COLORS */
     border: 1px solid var(--color-links-dark);
     border-radius: 8px;
@@ -788,6 +810,13 @@ section {
     bottom: 0;
     transform: translate(-50px, -50px);
 }
+.socials {
+    a img {
+        padding: 2px;
+        max-width: 50px;
+        max-height: 50px; 
+    }
+}
 
 /* ALIGN CONTENT : CENTER | LEFT TEXT |*/
 .middle {
@@ -799,7 +828,6 @@ section {
 .left {
     text-align: justify;
 }
-
 
 /* ---------------------- */
 /* ----- ANIMATION ----- */
