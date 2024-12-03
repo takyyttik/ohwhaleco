@@ -313,6 +313,18 @@ body {
 
 }
 
+@media (max-width: 767px) {
+    .row.twoupmobile {
+        --gridgap: 1em;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gridgap);
+    }
+    .one-fourth {grid-column: auto / span 1;}
+}
+
 /* FOR DEMO PURPOSES */
 /* .demo > * {
     background-color: #444;
@@ -552,6 +564,24 @@ body {
     padding-top: calc(4em + var(--unit-large));
     }
 }
+/* MAKE SITE HEADER DARK */
+.site-header.on-top-of-hero.dark {
+    /* RENDER HEADER ON TOP OF HERO */
+    position: absolute;
+    width: 100%;
+
+/* SET SITE HEADER LINK COLOR ON LARGE SCREENS */
+--color-siteheader-links: var(--color-links-dark);
+    a {
+        color: var(--color-siteheader-links);
+    }
+
+/* ADD MORE SPACE ON TOP FOR THE ABSOLUTE HEADER */
+    & + .site-header > .hero {
+    padding-top: calc(4em + var(--unit-large));
+    }
+}
+
 
 /* SITE MAIN */
 .site-main {
@@ -681,12 +711,12 @@ section {
 .product-card {
     padding-bottom: 3svh;
     margin-top: -3svh;
-    @media (max-width:767px) {
+    /* @media (max-width:767px) {
         .row .one-fourth{
             grid-column: auto / span 6;
 
         }
-    }
+    } */
 }
 
 /* SECTION CUSTONIZATION */
@@ -810,11 +840,24 @@ section {
     bottom: 0;
     transform: translate(-50px, -50px);
 }
+
 .socials {
     a img {
         padding: 2px;
         max-width: 50px;
         max-height: 50px; 
+    }
+}
+
+.about {
+    position: relative;
+    z-index: -10;
+    background-image: url('../img/about_dash_2.png');
+    background-size: cover;
+    background-position: center;
+    img {
+        max-width: 500px;
+        height: auto;
     }
 }
 
@@ -827,6 +870,11 @@ section {
 
 .left {
     text-align: justify;
+}
+
+.center-button {
+    text-align: center;
+
 }
 
 /* ---------------------- */
